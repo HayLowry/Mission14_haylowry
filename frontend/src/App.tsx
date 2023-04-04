@@ -1,25 +1,24 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
+import Navbar from './Navbar';
+import Headshot from './JoelHiltonHeadshot.jpg';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
+    <>
+      <div>
+        <Navbar></Navbar>
+      </div>
+      <div className="App">
+        <h1>Joel Hilton's Movie site</h1>
+        <img src={Headshot} alt="Joel Hilton Headshot" />
+        <br />
         <p>
-          Edit <code>src/App.tsx</code> and save to reload.
+          This site is to display and track Joel Hilton's favorite movies of all
+          time!
         </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+      </div>
+    </>
   );
 }
 
