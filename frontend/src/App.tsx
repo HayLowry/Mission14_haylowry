@@ -2,6 +2,7 @@ import React from 'react';
 import './App.css';
 import Navbar from './Navbar';
 import Headshot from './JoelHiltonHeadshot.jpg';
+import MovieList from './movies/MovieList';
 
 function App() {
   return (

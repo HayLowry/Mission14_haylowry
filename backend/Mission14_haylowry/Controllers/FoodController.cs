@@ -10,16 +10,18 @@ using Mission14_haylowry.Data;
 namespace Mission14_haylowry.Controllers;
 [ApiController]
 [Route("[controller]")]
-public class MovieController : Controller
+public class FoodController : Controller
 {
     private MoviesDbContext context;
 
-    public MovieController(MoviesDbContext temp) => context = temp;
+    public FoodController(MoviesDbContext temp) => context = temp;
 
     // GET: /<controller>/
     public IEnumerable<Movies> Get()
     {
-        return context.Movies.ToArray();
+        return context.Movies.ToArray()
+            .Where(x => x.Edited == "Yes" || x.Edited == null)
+            .OrderBy(x => x.Title);
     }
 }
 
